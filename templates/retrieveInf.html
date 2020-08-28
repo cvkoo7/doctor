@@ -1,0 +1,29 @@
+{% extends "home.html" %}
+{% block title %}retrieveInf{% endblock title %}
+{% block retrieveInfactive %}active{% endblock retrieveInfactive %}
+{% block body %}
+
+    <div class="section-top-border">
+        <h3 class="mb-30 mt-30" style="text-align:center">Retrieved Information</h3>
+        <div class="progress-table-wrap">
+            <div class="progress-table">
+                <div class="table-head">
+                    <div class="serial">Name</div>
+                    <div class="country">Email</div>
+                    <div class="visit">Subject</div>
+                    <div class="percentage">Description</div>
+                </div>
+                {% for item in data %}
+                    <div class="table-row">
+                        <div class="serial">{{ item.name }}</div>
+                        <div class="country">{{ item.email }}</div>
+                        <div class="visit">{{ item.subject }}</div>
+                        <div class="visit">{{ item.desc }}</div>
+                    </div>
+                {% endfor %}
+            </div>
+            s
+        </div>
+    </div>
+
+{% endblock body %}
